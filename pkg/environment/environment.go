@@ -49,6 +49,8 @@ func GetENV(testDetails *types.TestDetails, expName, engineName string) {
 	testDetails.AzureDiskName = Getenv("AZURE_DISK_NAME", "")
 	testDetails.AzureScaleSet = Getenv("AZURE_SCALE_SET", "")
 	testDetails.ProcessIds = Getenv("PROCESS_IDS", "")
+	testDetails.CPU = Getenv("CPU", "")
+	testDetails.LoadPercentage = Getenv("LOAD_PERCENTAGE", "")
 	testDetails.Args = Getenv("ARGS", "")
 	testDetails.Command = Getenv("COMMAND", "")
 

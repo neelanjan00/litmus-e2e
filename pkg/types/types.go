@@ -61,6 +61,8 @@ type TestDetails struct {
 	AzureDiskName             string
 	AzureScaleSet             string
 	ProcessIds                string
+	CPU                       string
+	LoadPercentage            string
 	Args                      string
 	Command                   string
 }

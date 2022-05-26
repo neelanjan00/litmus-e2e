@@ -281,6 +281,14 @@ process-kill-parallel:
 	@echo "------------------------------------------"
 	@go test platform/os/process-kill-parallel_test.go -v -count=1 -timeout=20m
 
+.PHONY: cpu-stress
+cpu-stress:
+
+	@echo "------------------------------------------"
+	@echo "Running cpu-stress experiment"
+	@echo "------------------------------------------"
+	@go test platform/os/cpu-stress_test.go -v -count=1 -timeout=20m
+
 .PHONY: operator-reconcile-resiliency-check
  operator-reconcile-resiliency-check:
 

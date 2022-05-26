@@ -340,6 +340,9 @@ func setEngineVar(chaosEngine *v1alpha1.ChaosEngine, testsDetails *types.TestDet
 		envDetails.SetEnv("APP_VM_MOIDS", testsDetails.VMIds)
 	case "process-kill":
 		envDetails.SetEnv("PROCESS_IDS", testsDetails.ProcessIds)
+	case "cpu-stress":
+		envDetails.SetEnv("CPU", testsDetails.CPU).
+			SetEnv("LOAD_PERCENTAGE", testsDetails.LoadPercentage)
 	}
 
 	// for experiments like pod network latency
